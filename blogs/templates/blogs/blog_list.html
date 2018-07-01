@@ -1,0 +1,10 @@
+{% for blog in blog_list %}
+    <ul>
+        <li>
+            <h2>{{blog.title}}</h2>
+            <div>{{blog.description}}</div>
+            <p>{{blog.author}}</p>
+            
+        </li>
+    </ul>
+{% endfor %}
