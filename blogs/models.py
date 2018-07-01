@@ -7,7 +7,6 @@ class Blog(models.Model):
     description = models.CharField(max_length=255)
     author = models.ForeignKey(User, on_delete = models.CASCADE, default=None, related_name="blogs")
 
-
     def __str__(self):
         return self.title
 

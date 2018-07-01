@@ -1,10 +1,25 @@
-{% for blog in blog_list %}
-    <ul>
-        <li>
-            <h2>{{blog.title}}</h2>
-            <div>{{blog.description}}</div>
-            <p>{{blog.author}}</p>
+{% extends 'base.html' %}
+{% block content %}
+<br>
+<br>
+<div class="album py-5 bg-light">
+        <div class="container">
+          <h1>List of all blogs</h1>
+          <div class="row">
+            {% for blog in blog_list %}
+            <div class="col-md-4">
+              <div class="card mb-4 box-shadow">
+                <div class="card-body">
+                    <h2><a href="{% url 'blog_detail' blog.id %}">{{blog.title}}</a></h2>
+                  <p class="card-text">{{blog.description}}</p>
+                  <small>{{blog.author}}</small>
+                </div>
+              </div>
+            </div>
+            {% endfor %}
             
-        </li>
-    </ul>
-{% endfor %}
+          </div>
+        </div>
+      </div>
+
+{% endblock %}

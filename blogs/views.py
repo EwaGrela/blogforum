@@ -8,8 +8,5 @@ class BlogList(ListView):
 class BlogDetail(DetailView):
     model = Blog
 
-class PostList(ListView):
-    model = Post
-
 class PostDetail(DetailView):
     model = Post
